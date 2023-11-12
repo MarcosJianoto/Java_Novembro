@@ -17,7 +17,7 @@ public class App {
         }
         double avg = sum / n;
 
-        System.out.println("AVERAGE HEIGHT: " + avg);
+        System.out.printf("AVERAGE HEIGHT: %.2f%n", avg);
 
         sc.close();
 
