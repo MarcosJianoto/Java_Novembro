@@ -1,6 +1,7 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import entities_enums.WorkerLevel;
 
@@ -22,7 +23,6 @@ public class Worker {
         this.baseSalary = baseSalary;
         this.department = department;
     }
-
 
     public String getName() {
         return this.name;
@@ -60,9 +60,26 @@ public class Worker {
         return this.contratcs;
     }
 
-    public void setContratcs(List<HourContract> contratcs) {
-        this.contratcs = contratcs;
+    public void addContracts(HourContract contract) {
+        contratcs.add(contract);
     }
 
+    public void removeContract(HourContract contract) {
+        contratcs.remove(contract);
+    }
+
+    public double income(int year, int month) {
+        double sum = baseSalary;
+        Calendar cal = Calendar.getInstance();
+        for (HourContract c : contratcs) {
+            cal.setTime(c.getDate());
+            int c_year = cal.get(Calendar.YEAR);
+            int c_month = 1 + cal.get(Calendar.MONTH);
+            if (year == c_year && month == c_month) {
+                sum += c.totalValue();
+            }
+        }
+        return sum;
+    }
 
 }
