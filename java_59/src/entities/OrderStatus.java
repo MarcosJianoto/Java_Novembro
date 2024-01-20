@@ -1,6 +1,6 @@
 package entities;
 
-public enum Teste_enum {
+public enum OrderStatus {
   RUA,
   BAIRRO,
   CIDADE,
