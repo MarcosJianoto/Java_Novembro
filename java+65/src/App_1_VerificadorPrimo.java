@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class VerificadorPrimo {
+public class App_1_VerificadorPrimo {
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
