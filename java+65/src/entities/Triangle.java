@@ -27,4 +27,12 @@ public class Triangle {
   public void setWidht(int widht) {
     this.widht = widht;
   }
+
+  public double area() {
+    return height * widht;
+  }
+
+  public double perimetro() {
+    return height * 2 + widht * 2;
+  }
 }
