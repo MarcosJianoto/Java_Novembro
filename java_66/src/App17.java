@@ -7,8 +7,25 @@ public class App17 {
     Locale.setDefault(Locale.US);
     Scanner sc = new Scanner(System.in);
 
-    
+    String senha = sc.next();
+    int contador = 0;
 
-    sc.close();
+    while (true) {
+      if (contador == 3) {
+        System.out.println("3 tentativas, falhou!");
+        break;
+      }
+
+      if (!senha.equals("senha123")) {
+        System.out.println("Acesso negado");
+        contador++;
+        senha = sc.next();
+        continue;
+      } else if (senha.equals("senha123")) {
+        System.out.println("Acesso permitido");
+        break;
+      }
+      sc.close();
+    }
   }
 }
