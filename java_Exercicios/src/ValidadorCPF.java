@@ -108,9 +108,4 @@ public class ValidadorCPF {
       sc.close();
     }
   }
-
-  private static char[] CPFarray(int i) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'CPFarray'");
-  }
 }
