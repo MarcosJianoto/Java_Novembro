@@ -7,8 +7,12 @@ public class ValidadorSenha {
     Locale.setDefault(Locale.US);
     Scanner sc = new Scanner(System.in);
 
+    //inicio da senha.
+    //complexidade: Senha precisa ter: numero e letra.
+    String senhaDigitada = "5432marcos";
     
 
+  
 
     sc.close();
   }
