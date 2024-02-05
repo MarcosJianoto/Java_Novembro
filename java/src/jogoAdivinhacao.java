@@ -1,13 +1,13 @@
-import entities.Department;
-import java.util.Locale;
 import java.util.Scanner;
 
-public class NelioAlves_Enumeracao {
+public class senhaSimples {
 
   public static void main(String[] args) throws Exception {
+    //solicitar que o usuário digite uma senha;
+    //a senha terá letra e numero;
     Scanner sc = new Scanner(System.in);
-    Locale.setDefault(Locale.US);
 
+    
     sc.close();
   }
 }
