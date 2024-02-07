@@ -45,11 +45,14 @@ public class Salario {
     );
     System.out.printf("Salário anual: %.2f%n", totalAnual);
     System.out.printf(
-      "Salário anual com investimentos: %.2f",
+      "Salário anual com investimentos: %.2f%n",
       totalAnual + investimentos
     );
-
-    //Salário + investimentos:
+    System.out.println(
+      "Salario sem o alimentação: " + (totalAnual - alimentacaoAnual)
+    );
+    //se eu viajar pra Lud, vai sobrar uns 10 mil +- do ano.
+    //então ficaria 35000.00 | e eu gastaria 15 no carro, ou 12 ? e sobraria 23000 ~~ 20000
 
     sc.close();
   }
