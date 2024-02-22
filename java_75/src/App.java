@@ -19,6 +19,7 @@ public class App {
     List<Shape> list = new ArrayList<>();
 
     for (int i = 1; i < number; i++) {
+      
       System.out.print("Shape #" + i + " data:");
       System.out.println("Regtangle or Circle (r/c)?");
       char ch = sc.next().charAt(0);
@@ -35,6 +36,11 @@ public class App {
         double radius = sc.nextDouble();
         list.add(new Circle(radius, color));
       }
+    }
+
+    System.out.println("SHAPE AREAS: ");
+    for (Shape acc : list) {
+      System.out.println(acc.area());
     }
 
     sc.close();
