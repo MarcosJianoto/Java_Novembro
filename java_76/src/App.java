@@ -15,6 +15,9 @@ public class App {
         System.out.println(
           "Ops... você digitou caracteres. Precisamos que digite apenas números."
         );
+      } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Invalid position");
+        e.printStackTrace();
       }
       ler.nextLine();
     } while (numero == 0);
