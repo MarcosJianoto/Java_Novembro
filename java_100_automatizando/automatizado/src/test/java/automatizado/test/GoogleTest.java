@@ -1,5 +1,7 @@
 package automatizado.test;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -25,7 +27,14 @@ public class GoogleTest {
   public void devePesquisarNoGoogle() {
     iniciar();
 
-    WebElement inputPesquis a = driver.findElement(By.name("q"));
+    //Preparação, ação e confirmação..
+    WebElement inputPesquisa = driver.findElement(By.name("q"));
     inputPesquisa.sendKeys("Batata frita" + Keys.ENTER);
+
+    String resultado = driver.findElement(By.id("result-stats")).getText();
+
+    assertTrue(resultado, resultado.contains("Aproximadamente"));
+
+    driver.quit();
   }
 }
