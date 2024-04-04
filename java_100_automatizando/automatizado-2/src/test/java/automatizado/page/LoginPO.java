@@ -35,8 +35,4 @@ public class LoginPO extends BasePO {
   public String obterMensagem() {
     return spanMensagem.getText();
   }
-
-  public String obterTituloPagina() {
-    return driver.getTitle();
-  }
 }
