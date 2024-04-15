@@ -1,4 +1,4 @@
-public class App {
+public class forEach {
 
   public static void main(String[] args) throws Exception {
     String[] vect = new String[] { "Maria", "João", "Pedro" };
