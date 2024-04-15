@@ -43,11 +43,7 @@ public class FormulasJurosCompostos {
     this.tempo = tempo;
   }
 
-  public double getMontante() {
-    return this.montante;
-  }
-
-  public void setMontante(double montante) {
-    this.montante = montante;
+  public double calcMontante(double taxaDeJuros) {
+    return montante = capital * Math.pow((1 + taxaDeJuros), tempo);
   }
 }

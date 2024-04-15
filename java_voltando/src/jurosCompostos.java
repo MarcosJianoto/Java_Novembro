@@ -14,36 +14,44 @@ public class jurosCompostos {
     System.out.println("Aporte Mensal: ");
     double aporteMensal = sc.nextDouble();
 
+    //tipo de juros
     System.out.println(
       "Qual o tipo de juros? 1 - Ao dia, 2 - Ao mês, 3 - Bimestral ou 4 - Anual?"
     );
     String tipoJuros = sc.nextLine();
 
-    TaxaDeJuros qualTaxaDeJuros;
-
-    if (tipoJuros.equals(1) || tipoJuros.equals("um")) {
-      qualTaxaDeJuros = TaxaDeJuros.ADIA;
-    } else if (tipoJuros.equals(2) || tipoJuros.equals("dois")) {
-      qualTaxaDeJuros = TaxaDeJuros.AMES;
-    } else if (tipoJuros.equals(3) || tipoJuros.equals("tres")) {
-      qualTaxaDeJuros = TaxaDeJuros.ABIMESTRE;
-    } else if (tipoJuros.equals(4) || tipoJuros.equals("quatro")) {
-      qualTaxaDeJuros = TaxaDeJuros.AANO;
-    } else {
-      System.out.println("Inexistente esse tipo de juros");
-    }
-
     System.out.println("Valor do Juros: ");
-    int juros = sc.nextInt();
+    double juros = sc.nextInt();
 
     System.out.println("Taxa de Juros: ");
-    int taxaDeJuros = sc.nextInt();
+    double taxaDeJuros = sc.nextInt();
+    double converterTaxaJuros;
+
+    if (tipoJuros.equals(1) || tipoJuros.equals("um")) {
+      converterTaxaJuros = taxaDeJuros * 365;
+    } else if (tipoJuros.equals(2) || tipoJuros.equals("dois")) {
+      converterTaxaJuros = taxaDeJuros * 12;
+    } else if (tipoJuros.equals(3) || tipoJuros.equals("tres")) {
+      converterTaxaJuros = taxaDeJuros * 3;
+    } else if (tipoJuros.equals(4) || tipoJuros.equals("quatro")) {
+      converterTaxaJuros = taxaDeJuros;
+    }
 
     System.out.println("tempo: ");
-    int tempo = sc.nextInt();
+    double tempo = sc.nextInt();
 
     System.out.println("montante: ");
-    int montante = sc.nextInt();
+    double montante = sc.nextInt();
+
+    FormulasJurosCompostos form = new FormulasJurosCompostos(
+      capital,
+      juros,
+      tempo,
+      montante
+    );
+    System.out.println(form.calcMontante(taxaDeJuros));
+
+    System.out.println();
 
     System.out.println();
   }
