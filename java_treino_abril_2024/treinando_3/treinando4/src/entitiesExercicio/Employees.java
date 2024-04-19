@@ -37,4 +37,13 @@ public class Employees {
   public void setSalary(double salary) {
     this.salary = salary;
   }
+
+  public double increaseSalary(double percentage) {
+    return salary += salary * percentage / 100;
+  }
+
+  @Override
+  public String toString() {
+    return id + ", " + name + ", " + String.format("%.2f%n", salary);
+  }
 }
