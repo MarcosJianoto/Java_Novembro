@@ -33,6 +33,8 @@ public class converterdatahhora {
     System.out.println(d04.getDayOfMonth());
     System.out.println(d04.getMonthValue());
     System.out.println(d04.getYear());
+    System.out.println(d02.getHour());
+    System.out.println(d02.getMinute());
 
     sc.close();
   }
