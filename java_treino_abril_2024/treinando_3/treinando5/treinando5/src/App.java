@@ -16,7 +16,7 @@ public class App {
     System.out.println(order);
     System.out.println("-------------------");
 
-    String orderDigit = "pending_payment";
+    String orderDigit = "batata";
     String orderDigitUpper = orderDigit.toUpperCase();
     System.out.println(orderDigitUpper);
     System.out.println("-------------------");
