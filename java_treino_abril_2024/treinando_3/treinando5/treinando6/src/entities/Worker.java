@@ -13,6 +13,7 @@ public class Worker {
   private Double baseSalary;
 
   private Department department;
+  
   //Composição tem muitos, não incluímos o cara no construtor...
   private List<HourContract> contracts = new ArrayList<>();
 
